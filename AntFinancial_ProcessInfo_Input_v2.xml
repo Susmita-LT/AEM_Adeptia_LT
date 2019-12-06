@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdeptiaPE xmlns:version = "4.7" xmlns:j = "jelly:core" xmlns:abpm = "jelly:com.adeptia.indigo.jelly.IndigoTagLibrary" xmlns:pd = "jelly:com.adeptia.indigo.pd.ProcessDesignerTagLibrary" xmlns = "jelly:com.werken.blissed.jelly.BlissedTagLibrary" >
+	<process name = "mainProcess" var = "mainProcess" start = "startState">
+		<state name = "startState">
+			<activity>
+				<abpm:indigoGlobalVariables>
+					<abpm:params>
+						<abpm:param name = "varHistoryDirectory" track = "false">
+							<![CDATA[\\192.168.5.218\d$\Program Files\AdeptiaSuite\AdeptiaSuite-6.6\AdeptiaServer\ServerKernel\Solutions\Alibaba\APWS\DownloadHistory]]>
+						</abpm:param>
+					</abpm:params>
+				</abpm:indigoGlobalVariables>
+				<abpm:indigoGeneralVariables>
+					<abpm:params>
+					</abpm:params>
+				</abpm:indigoGeneralVariables>
+				<abpm:indigoActivityVariables>
+					<abpm:params>
+						<abpm:param name = "varCombineRouteFiles" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varFtSize" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varOutputProcessFlowID" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varManualOverride" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varCompanyName" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varPdfOrientation" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varCombineBatchFiles" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varEmailErrorsTo" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varRoutes" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varWebServiceTypeID" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varManualEndDate" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varFileDirectory" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+						<abpm:param name = "varManualStartDate" activityName = "APMaster_DM_LoadProcessInfo_v2" activityLabel = "APMaster_DM_LoadProcessInfo_v2" activityType = "DataMapping" track = "false">
+						</abpm:param>
+					</abpm:params>
+				</abpm:indigoActivityVariables>
+				<abpm:installGlobalExceptionHandlers>
+					<abpm:exceptionHandlers>
+					</abpm:exceptionHandlers>
+				</abpm:installGlobalExceptionHandlers>
+			</activity>
+		</state>
+		<state name = "state-BPMN:TASK:BASIC_TASK-17695362">
+			<activity>
+				<abpm:activity type="Stream2XmlStreamTransformer" id="" name="APMaster_ExcelSchema_ProcessInfo_v2" async="false"  >
+					<abpm:params>
+						<abpm:param name="source">APMaster_FileSource_ProcessInfo_v2</abpm:param>
+						<abpm:param name="schemaTypedId">ExcelSchema:192168005220149192941464400013</abpm:param>
+						<abpm:param name="restartTriesCount">0</abpm:param>
+						<abpm:param name="dataAction">No Action</abpm:param>
+						<abpm:param name="restartWaitTime">60</abpm:param>
+						<abpm:param name="errorRecordHandleType">File</abpm:param>
+						<abpm:param name="characterSetEncoding">ISO-8859-1</abpm:param>
+						<abpm:param name="fileType">.xls</abpm:param>
+					</abpm:params>
+				</abpm:activity>
+				<pd:graphics x = "178.0" y = "249.0" width = "138.0" height = "29.0" streamNames = "name=APMaster_ExcelSchema_ProcessInfo_v2,explicit=false,error=false,target=state-BPMN:TASK:BASIC_TASK-27756996#"  owner = "FlowObject" textLabel = "APMaster_ExcelSchema_ProcessInfo_v2" color = "172,227,236" printSequence = "7"/>
+				<pd:graphics linkType = "UNCONTROLLED_FLOW" source = "state-BPMN:TASK:BASIC_TASK-17695362" destination = "state-BPMN:TASK:BASIC_TASK-27756996" xpoints = "247,247" ypoints = "288,281" hasManualPlacement = "false" arcData = "" arrowPoints = "239,247,239,239|287,291,295,287" order = "0" startPoint = "247,278" endPoint = "247,291" direction = "3,5" linkColor = "0,0,0" owner = "Transition" textLabel = "" textX = "0" textY = "0" textLabelWidth = "0.0" textLabelHeight = "0.0" printSequence = "-1"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:POOL:BPMN_POOL-27756990">
+			<activity>
+				<pd:pool type = "pool" id = "010025095102157560912852400001"/>
+				<pd:graphics x = "0.0" y = "0.0" width = "1398.0" height = "183.0" owner = "FlowObject" textLabel = "Pool" printSequence = "-1"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:LANE:BPMN_LANE-27756991">
+			<activity>
+				<pd:lane type = "lane" id = "010025095102157560912853600002"/>
+				<pd:graphics x = "25.0" y = "0.0" width = "1373.0" height = "183.0" owner = "FlowObject" textLabel = "Lane" associatedPool = "010025095102157560912852400001" printSequence = "-1"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:EVENT:START_EVENT-27756992">
+			<activity>
+				<pd:event type = "start" subType = "none" />
+				<pd:graphics x = "30.0" y = "103.0" width = "30.0" height = "30.0" owner = "FlowObject" textLabel = "Start Event" associatedLane = "010025095102157560912853600002" associatedPool = "010025095102157560912852400001" color = "0,204,15" printSequence = "1"/>
+				<pd:graphics linkType = "UNCONTROLLED_FLOW" source = "state-BPMN:EVENT:START_EVENT-27756992" destination = "state-BPMN:TASK:BASIC_TASK-2010224041" xpoints = "70,244,244,244" ypoints = "118,118,118,138" hasManualPlacement = "false" arcData = "244,113,10,10,180,-90" arrowPoints = "236,244,236,236|144,148,152,144" order = "0" startPoint = "60,118" endPoint = "244,148" direction = "2,5" linkColor = "0,0,0" owner = "Transition" textLabel = "" textX = "0" textY = "0" textLabelWidth = "0.0" textLabelHeight = "0.0" printSequence = "-1"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:EVENT:END_EVENT-27756993">
+			<activity>
+				<pd:event type = "end" subType = "none" />
+				<pd:graphics x = "542.0" y = "112.0" width = "30.0" height = "30.0" owner = "FlowObject" textLabel = "End Event" associatedLane = "010025095102157560912853600002" associatedPool = "010025095102157560912852400001" color = "251,103,87" printSequence = "2"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:TASK:BASIC_TASK-27756994">
+			<activity>
+				<abpm:activity type="FileSource" id="192168005220149323419143300009" name="APMaster_FileSource_ProcessInfo_v2" async="false"  >
+					<abpm:params>
+						<abpm:param name="eventContextEnabled">false</abpm:param>
+						<abpm:param name="restartWaitTime">60</abpm:param>
+						<abpm:param name="restartTriesCount">0</abpm:param>
+					</abpm:params>
+				</abpm:activity>
+				<pd:graphics x = "177.0" y = "205.0" width = "140.0" height = "29.0" streamNames = "name=APMaster_FileSource_ProcessInfo_v2,explicit=false,error=false,target=state-BPMN:TASK:BASIC_TASK-17695362#"  owner = "FlowObject" textLabel = "APMaster_FileSource_ProcessInfo_v2" color = "172,227,236" printSequence = "3"/>
+				<pd:graphics linkType = "UNCONTROLLED_FLOW" source = "state-BPMN:TASK:BASIC_TASK-27756994" destination = "state-BPMN:TASK:BASIC_TASK-17695362" xpoints = "244,244,244,247,247,247" ypoints = "244,242,242,242,242,239" hasManualPlacement = "false" arcData = "239,232,10,10,270,90|247,237,10,10,180,-90" arrowPoints = "239,247,239,239|245,249,253,245" order = "0" startPoint = "244,234" endPoint = "247,249" direction = "3,5" linkColor = "0,0,0" owner = "Transition" textLabel = "" textX = "0" textY = "0" textLabelWidth = "0.0" textLabelHeight = "0.0" printSequence = "-1"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:TASK:BASIC_TASK-27756996">
+			<activity>
+				<abpm:activity type="DataMapping" id="192168005220149192947935600015" name="APMaster_DM_LoadProcessInfo_v2" async="false"  >
+					<abpm:params>
+						<abpm:param name="ID">192168005220149192947935600015</abpm:param>
+						<abpm:param name="restartWaitTime">60</abpm:param>
+						<abpm:param name="characterSetEncoding">UTF-8</abpm:param>
+						<abpm:param name="restartTriesCount">0</abpm:param>
+						<abpm:param name="streamNames">null</abpm:param>
+						<abpm:param name="Consume Stream">true</abpm:param>
+						<abpm:param name="transformerType">Saxon</abpm:param>
+						<abpm:param name="source">APMaster_ExcelSchema_ProcessInfo_v2</abpm:param>
+					</abpm:params>
+				</abpm:activity>
+				<pd:graphics x = "176.0" y = "291.0" width = "143.0" height = "29.0" owner = "FlowObject" textLabel = "APMaster_DM_LoadProcessInfo_v2" color = "172,227,236" printSequence = "4"/>
+				<pd:graphics linkType = "UNCONTROLLED_FLOW" source = "state-BPMN:TASK:BASIC_TASK-27756996" destination = "state-BPMN:TASK:BASIC_TASK-27756997" xpoints = "247,247" ypoints = "330,325" hasManualPlacement = "false" arcData = "" arrowPoints = "239,247,239,239|331,335,339,331" order = "0" startPoint = "247,320" endPoint = "247,335" direction = "3,5" linkColor = "0,0,0" owner = "Transition" textLabel = "" textX = "0" textY = "0" textLabelWidth = "0.0" textLabelHeight = "0.0" printSequence = "-1"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:TASK:BASIC_TASK-27756997">
+			<activity>
+				<abpm:activity type="CustomPlugin" id="192168005220149192951265800017" name="APMaster_CP_SetChildVariables_APM_v2" async="false"  >
+					<abpm:params>
+						<abpm:param name="restartWaitTime">60</abpm:param>
+						<abpm:param name="characterSetEncoding">None</abpm:param>
+						<abpm:param name="streamNames">null</abpm:param>
+						<abpm:param name="restartTriesCount">0</abpm:param>
+						<abpm:param name="Consume Stream">false</abpm:param>
+						<abpm:param name="source">null</abpm:param>
+					</abpm:params>
+				</abpm:activity>
+				<pd:graphics x = "176.0" y = "335.0" width = "143.0" height = "27.0" owner = "FlowObject" textLabel = "APMaster_CP_SetChildVariables_APM_v2" color = "172,227,236" printSequence = "5"/>
+				<pd:graphics linkType = "UNCONTROLLED_FLOW" source = "state-BPMN:TASK:BASIC_TASK-27756997" destination = "state-BPMN:TASK:BASIC_TASK-27756998" xpoints = "247,247" ypoints = "372,369" hasManualPlacement = "false" arcData = "" arrowPoints = "239,247,239,239|375,379,383,375" order = "0" startPoint = "247,362" endPoint = "247,379" direction = "3,5" linkColor = "0,0,0" owner = "Transition" textLabel = "" textX = "0" textY = "0" textLabelWidth = "0.0" textLabelHeight = "0.0" printSequence = "-1"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:TASK:BASIC_TASK-27756998">
+			<activity>
+				<abpm:call name="APMasterCall" flowId = "192168005220149192650660000003" resultCtxVarName = "" executeOnSameNode = "false" />
+				<pd:graphics x = "174.0" y = "379.0" width = "146.0" height = "28.0" owner = "FlowObject" textLabel = "Call Master Process" color = "172,227,236" printSequence = "6"/>
+				<pd:graphics linkType = "UNCONTROLLED_FLOW" source = "state-BPMN:TASK:BASIC_TASK-27756998" destination = "state-BPMN:EVENT:END_EVENT-27756993" xpoints = "247,247,247,557,557,557" ypoints = "417,437,437,437,437,152" hasManualPlacement = "false" arcData = "242,427,10,10,270,90|557,432,10,10,180,-90" arrowPoints = "549,557,549,549|138,142,146,138" order = "0" startPoint = "247,407" endPoint = "557,142" direction = "3,7" linkColor = "0,0,0" owner = "Transition" textLabel = "" textX = "0" textY = "0" textLabelWidth = "0.0" textLabelHeight = "0.0" printSequence = "-1"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:ARTIFACT:ANNOTATION_ARTIFACT-29869576">
+			<activity>
+				<pd:artifact type = "ANNOTATION_ARTIFACT" />
+				<pd:graphics x = "132.0" y = "29.0" width = "244.0" height = "56.0" owner = "FlowObject" textLabel = "This is the initial call to the APMaster Process Flow. Create a copy of this flow and replace the APMaster_FileSource_ProcessInfo activity with the company-specific Process Info File Source." associatedLane = "010025095102157560912853600002" associatedPool = "010025095102157560912852400001" printSequence = "8"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:ARTIFACT:ANNOTATION_ARTIFACT-29869577">
+			<activity>
+				<pd:artifact type = "ANNOTATION_ARTIFACT" />
+				<pd:graphics x = "331.0" y = "149.0" width = "186.0" height = "27.0" owner = "FlowObject" textLabel = "&lt;-- Replace with company-specific &lt;-- process info file source" associatedLane = "010025095102157560912853600002" associatedPool = "010025095102157560912852400001" printSequence = "9"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<state name = "state-BPMN:TASK:BASIC_TASK-2010224041">
+			<activity>
+				<abpm:put-context-var name="PutContextVarTag1" key="fileName,filePath" value="AntFinancial_ProcessInfo_APWS_v2.xls.\Solutions\AntFinancial\APWS" activityName="APMaster_FileSource_ProcessInfo_v2,APMaster_FileSource_ProcessInfo_v2" length="36,29"/>
+				<pd:graphics x = "179.0" y = "148.0" width = "131.0" height = "40.0" owner = "FlowObject" textLabel = "PutContextVarTag1" color = "172,227,236" printSequence = "10"/>
+				<pd:graphics linkType = "UNCONTROLLED_FLOW" source = "state-BPMN:TASK:BASIC_TASK-2010224041" destination = "state-BPMN:TASK:BASIC_TASK-27756994" xpoints = "244,244" ypoints = "198,195" hasManualPlacement = "false" arcData = "" arrowPoints = "236,244,236,236|201,205,209,201" order = "0" startPoint = "244,188" endPoint = "244,205" direction = "3,5" linkColor = "0,0,0" owner = "Transition" textLabel = "" textX = "0" textY = "0" textLabelWidth = "0.0" textLabelHeight = "0.0" printSequence = "-1"/>
+				<pd:comments/>
+			</activity>
+		</state>
+		<transition from="startState" to="state-BPMN:EVENT:START_EVENT-27756992"/>
+		<transition from="state-BPMN:TASK:BASIC_TASK-27756998" to="state-BPMN:EVENT:END_EVENT-27756993"/>
+		<transition from="state-BPMN:TASK:BASIC_TASK-27756997" to="state-BPMN:TASK:BASIC_TASK-27756998"/>
+		<transition from="state-BPMN:TASK:BASIC_TASK-27756996" to="state-BPMN:TASK:BASIC_TASK-27756997"/>
+		<transition from="state-BPMN:TASK:BASIC_TASK-27756994" to="state-BPMN:TASK:BASIC_TASK-17695362"/>
+		<transition from="state-BPMN:TASK:BASIC_TASK-2010224041" to="state-BPMN:TASK:BASIC_TASK-27756994"/>
+		<transition from="state-BPMN:TASK:BASIC_TASK-17695362" to="state-BPMN:TASK:BASIC_TASK-27756996"/>
+		<transition from="state-BPMN:EVENT:START_EVENT-27756992" to="state-BPMN:TASK:BASIC_TASK-2010224041"/>
+	</process>
+</AdeptiaPE>
